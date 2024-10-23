@@ -3,57 +3,32 @@
   <head>
     <meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--general.css must be linked before other .css-->
     <link rel="stylesheet" href="general.css">
     <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="index.css">
 		<title>Kaliakair Paurashava</title>
   </head>
-  <body>
 
-  <!--adding navbar stuff using php-->
-  <!--note: add navbar.js before body end to make navbar.html function right-->
-  <nav class="navbar">
-    <div class="navbar-content">
-      <div class="imageSection">
-        <img src="Assets/KPLogo_white.png" alt="Kaliakair-pourashava-logo" class="logoAtTop">
-        <h1 id="kaliakair-pourashava" class="website_title">Kaliakair Pourashava</h1>
-        <button id="hamburger" class="hamburger">☰</button>
-      </div>
-      
-      <div id="navMenu" class="navigation-section">
-        <a href="index.php" class="noDrop">Home</a>
-        <a href="location_maps.php" class="noDrop">About</a>
-        <a href="#" class="noDrop">Employees</a>
-        
-        <div class="dropdown">
-          <button class="dropbtn">Projects</button>
-          <div class="dropdown-content">
-            <a href="#">2024</a>
-            <a href="#">2023</a>
-            <a href="#">2022</a>
-          </div>
-        </div>
-        
-        <div class="dropdown">
-          <button class="dropbtn">Budgets</button>
-          <div class="dropdown-content">
-            <a href="#">2024</a>
-            <a href="#">2023</a>
-            <a href="#">2022</a>
-          </div>
-        </div>
-        <!-- Other dropdown menus... -->
-        
-        <a href="#" class="noDrop">Contacts</a>
-      </div>
-    </div>
-  </nav>
+  <body>   
 
     <div class="body-section">
+      <!--all the body content goes here-->
+      <!--ie stuff inside inner white box-->
+      <!--This dynamic header will contain image that changes with each reload-->
+      <div id="dynamic-header" class="dynamic-header"></div>
+
       <p>kotha</p><p>kotha</p><p>kotha</p><p>kotha</p><p>kotha</p>
       <p>kotha</p><p>kotha</p><p>kotha</p><p>kotha</p><p>kotha</p>
       <p id="hello-line">hello this is a test line</p>
+      <p>kotha</p><p>kotha</p><p>kotha</p><p>kotha</p><p>kotha</p>
+
     </div>
     
-    <script src="navbar.js"></script>
+    
+    <script src="footer-loader.js"></script>
+    <script src="navbar-loader.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
