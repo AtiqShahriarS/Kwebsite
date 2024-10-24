@@ -28,12 +28,17 @@ async function loadNavbar() {
     dropdowns.forEach(dropdown => {
       const dropbtn = dropdown.querySelector('.dropbtn');
       dropbtn.addEventListener('click', (e) => {
-        if (window.innerWidth <= 770) {
+        if (window.innerWidth <= 804) {
           e.preventDefault();
           dropdown.classList.toggle('active');
         }
       });
     });
+
+    // After setting up dropdown listeners, initialize language switcher
+    if (window.initializeLanguageSwitcher) {
+      initializeLanguageSwitcher();
+    }
 
   } catch (error) {
     console.error('Error loading navbar:', error);
@@ -42,3 +47,14 @@ async function loadNavbar() {
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', loadNavbar);
+
+/*icon tab*/
+function setFavicon(faviconUrl) {
+  const link = document.createElement('link');
+  link.rel = 'icon';
+  link.href = faviconUrl;
+  document.head.appendChild(link);
+}
+
+// Call the function with the path to the favicon
+setFavicon('Assets/tabicon.ico');
