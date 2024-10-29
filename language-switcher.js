@@ -189,6 +189,7 @@ const numberMap = {
   '9': '৯'
 };
 
+
 // Core conversion functions
 function convertToBanglaNumbers(str) {
   if (!str) return '';
