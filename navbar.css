@@ -43,7 +43,6 @@
   height: 100px;
 }
 
-/* Website font fix*/
 .website_title {
   font-size: 32px;
   margin: 0;
@@ -135,7 +134,7 @@
   background-color: rgba(91, 221, 167, 0.767);
 }
 
-/* Language selector styles desktop*/
+/* Language selector styles for desktop size*/
 .language-selector {
   position: absolute;
   top: var(--height-navbar);
@@ -255,3 +254,17 @@
   }
 }
 
+ /* Add a media query to gradually reduce margin as screen gets smaller */
+ /* Movement range */
+@media screen and (min-width: 1050px) and (max-width: 1700px) {
+  .imageSection {
+    margin-left: var(--navbar-logo-margin);
+  }
+}
+
+/* When screen gets too small, remove margin completely */
+@media screen and (max-width: 1050px) {
+  .imageSection {
+    margin-left: 0;
+  }
+}
