@@ -1,8 +1,107 @@
+/*Changing header image*/
 .dynamic-header {
   width: 100%;
-  height: 500px; /* Adjust the height as needed */
+  height: 50vh; /* Responsive height based on viewport */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  margin-bottom: 20px; /* Add some space below the header */
+  margin-bottom: 20px;
+  transition: height 0.3s ease; /* Smooth transition for responsiveness */
+}
+
+/*Info card styles*/
+.information-section {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.information-section h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #003366;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #0a642c;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+  gap: 20px;
+}
+
+.info-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.3s ease;
+  min-height: 300px; /* Adjust the height as needed */
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+}
+
+.info-icon {
+  font-size: 36px;
+  color: #003366;
+  margin-bottom: 15px;
+}
+
+.info-card h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.info-card p {
+  color: #666;
+  font-size: 14px;
+}
+
+/* Styling for news links in the "News and Updates" card */
+.info-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.info-card ul li {
+  margin-bottom: 10px;
+}
+
+.info-card ul li a {
+  color: #003366; /* Dark blue to match theme */
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent; /* Subtle underline effect */
+}
+
+.info-card ul li a:hover {
+  color: #0b7734; /* Green hover effect to stand out */
+  transform: translateX(5px); /* Slight right shift on hover */
+  border-bottom: 2px solid #0a642c; /* Green underline on hover */
+}
+
+.info-card ul li a:active {
+  color: #0270df; /* Darker shade on click */
+}
+
+@media (max-width: 770px) {
+  .dynamic-header {
+    height: 30vh; /* Smaller height for mobile devices */
+  }
+}
+
+@media (min-width: 1200px) {
+  .dynamic-header {
+    height: 60vh; /* Larger height for larger screens */
+  }
 }
