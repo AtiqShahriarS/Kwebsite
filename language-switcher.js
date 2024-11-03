@@ -6,7 +6,7 @@ const translations = {
     'kaliakair-pourashava': 'Kaliakair Municipality',
     'home': 'Home',
     'about': 'About',
-    'employees': 'Employees',
+    'employees': 'Employees & Members',
     'projects': 'Projects',
     'budgets': 'Budgets',
     'contacts': 'Contacts',
@@ -128,7 +128,7 @@ const translations = {
     //maintenance page
     'content-soon': 'Content Coming Soon',
     
-    'welcome-title': 'Welcome to Kaliakoir Municipality',
+    'welcome-title': 'Welcome to Kaliakair Municipality',
     'welcome-intro': 'Established in 2003 (with its foundations set in 2001), Kaliakoir Municipality is designated as a Class A municipality, consisting of a total of 9 wards. Covering an area of 28.02 sq. km, it supports a population of approximately 700,000 people and includes 19,150 holdings.',
     'welcome-geography': 'Geographically, Kaliakair is located at latitude 24.0750°N and longitude 90.2167°E. It is bordered by Mirzapur and Sakhipur upazilas to the north, Savar and Dhamrai upazilas to the south, Gazipur Sadar and Sreepur upazilas to the east, and Mirzapur upazila to the west.',
     'welcome-rivers': 'The primary rivers in the area are Turag, Bangshi, and Salda. Other notable water bodies include Boali, Hawla, Ujan, and Markaj beels, along with the Goala and Betjuri canals.',
@@ -141,7 +141,7 @@ const translations = {
     'kaliakair-pourashava': 'কালিয়াকৈর পৌরসভা',
     'home': 'হোম',
     'about': 'সম্পর্কে',
-    'employees': 'কর্মচারী',
+    'employees': 'কর্মচারী ও সদস্যবৃন্দ',
     'projects': 'প্রকল্প',
     'budgets': 'বাজেট',
     'contacts': 'যোগাযোগ',
