@@ -28,7 +28,11 @@ async function loadNavbar() {
     dropdowns.forEach(dropdown => {
       const dropbtn = dropdown.querySelector('.dropbtn');
       dropbtn.addEventListener('click', (e) => {
+<<<<<<< HEAD
         if (window.innerWidth <= 925) {
+=======
+        if (window.innerWidth <= 849) {
+>>>>>>> 5272d2827a86fe65a75912348043644d056eed79
           e.preventDefault();
           dropdown.classList.toggle('active');
         }

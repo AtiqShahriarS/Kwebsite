@@ -193,7 +193,11 @@
 
 
 /* Desktop styles */
+<<<<<<< HEAD
 @media screen and (min-width: 926px){
+=======
+@media screen and (min-width: 850px) {
+>>>>>>> 5272d2827a86fe65a75912348043644d056eed79
 
   .navbar{
     height: var(--height-navbar);
@@ -232,6 +236,19 @@
     background-color: transparent;
   }
 
+<<<<<<< HEAD
+=======
+  .navigation-section .noDrop,
+  .navigation-section .dropdown .dropbtn{
+    height: 100%;
+    font-size: 17px;
+  }
+
+  .navigation-section .noDrop,
+  .dropdown .dropbtn {
+    padding: 20px 15px;
+  }
+>>>>>>> 5272d2827a86fe65a75912348043644d056eed79
 
   .dropdown {
     position: relative;
