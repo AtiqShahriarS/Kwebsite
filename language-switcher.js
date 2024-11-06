@@ -6,16 +6,10 @@ const translations = {
     'kaliakair-pourashava': 'Kaliakair Municipality',
     'home': 'Home',
     'about': 'About',
-<<<<<<< HEAD
     'employeesAndMembers': 'Employees/Members',
     'projectsAndBudgets': 'Project/Budgets',
     'notices': 'Notice',
     'tenders':'Tender',
-=======
-    'employees': 'Employees/Members',
-    'projects': 'Projects',
-    'budgets': 'Budgets',
->>>>>>> 5272d2827a86fe65a75912348043644d056eed79
     'contacts': 'Contacts',
     'forms': 'Forms',
 
@@ -98,7 +92,6 @@ const translations = {
 
     //info card stuff for about page
     'info-glance':'Pourashava At a Glance',
-<<<<<<< HEAD
     'info-established':'Established ',
     'info-class':'Class ',
     'info-total-wards':'Total Wards ',
@@ -113,22 +106,6 @@ const translations = {
     'info-public-toilets':'Public Toilets ',
     'info-waste-bins':'Waste Collection Bins ',
     'info-municipal-facilities':'Municipal Facilities ',
-=======
-    'info-established':'Established:',
-    'info-class':'Class:',
-    'info-total-wards':'Total Wards:',
-    'info-area':'Area:',
-    'info-population':'Population:',
-    'info-holdings':'No. of Holdings:',
-    'info-tax-collected':'Tax Collected:',
-    'info-literacy-rate':'Literacy Rate:',
-    'info-density':'Density:',
-    'info-road-network':'Road Network:',
-    'info-drain-network':'Drain Network:',
-    'info-public-toilets':'Public Toilets:',
-    'info-waste-bins':'Waste Collection Bins:',
-    'info-municipal-facilities':'Municipal Facilities:',
->>>>>>> 5272d2827a86fe65a75912348043644d056eed79
 
     // info card values for about page
     'info-established-value':'2003 (2001)',
@@ -162,17 +139,11 @@ const translations = {
     'kaliakair-pourashava': 'কালিয়াকৈর পৌরসভা',
     'home': 'হোম',
     'about': 'সম্পর্কে',
-<<<<<<< HEAD
     'employeesAndMembers': 'কর্মচারী/সদস্যবৃন্দ',
     'forms': 'ফর্ম',
     'projectsAndBudgets': 'প্রকল্প/বাজেট',
     'notices': 'নোটিশ',
     'tenders':'টেন্ডার',
-=======
-    'employees': 'কর্মচারী/সদস্যবৃন্দ',
-    'projects': 'প্রকল্প',
-    'budgets': 'বাজেট',
->>>>>>> 5272d2827a86fe65a75912348043644d056eed79
     'contacts': 'যোগাযোগ',
 
     // Employee List Translations
@@ -254,7 +225,6 @@ const translations = {
     'news-header':'সাম্প্রতিক খবর ও আপডেট',
 
     // info card stuff for about page
-<<<<<<< HEAD
     'info-glance':'এক নজরে পৌরসভা',
     'info-established':'প্রতিষ্ঠিত',
     'info-class':'শ্রেণী',
@@ -270,23 +240,6 @@ const translations = {
     'info-public-toilets':'পাবলিক টয়লেট',
     'info-waste-bins':'বর্জ্য সংগ্রহ বিন',
     'info-municipal-facilities':'পৌর সুবিধাসমূহ',
-=======
-    'info-glance: ':'এক নজরে পৌরসভা',
-    'info-established: ':'প্রতিষ্ঠিত',
-    'info-class: ':'শ্রেণী',
-    'info-total-wards: ':'মোট ওয়ার্ড',
-    'info-area: ':'এলাকা',
-    'info-population: ':'জনসংখ্যা',
-    'info-holdings: ':'হোল্ডিং সংখ্যা',
-    'info-tax-collected: ':'আদায়কৃত কর',
-    'info-literacy-rate: ':'সাক্ষরতার হার',
-    'info-density: ':'ঘনত্ব',
-    'info-road-network: ':'সড়ক নেটওয়ার্ক',
-    'info-drain-network: ':'ড্রেন নেটওয়ার্ক',
-    'info-public-toilets: ':'পাবলিক টয়লেট',
-    'info-waste-bins: ':'বর্জ্য সংগ্রহ বিন',
-    'info-municipal-facilities: ':'পৌর সুবিধাসমূহ',
->>>>>>> 5272d2827a86fe65a75912348043644d056eed79
 
     // info card span values for about page (Bangla)
     'info-established-value':'২০০৩ (২০০১)',
