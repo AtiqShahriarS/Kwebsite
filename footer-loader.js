@@ -13,6 +13,8 @@ async function loadFooter() {
     footer.className = 'site-footer';
     footer.innerHTML = footerHTML;
 
+    
+
     // Append footer at the end of body
     document.body.appendChild(footer);
 
@@ -33,3 +35,4 @@ async function loadFooter() {
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', loadFooter);
+

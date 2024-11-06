@@ -1,11 +1,25 @@
+/* Style for the image above the footer */
+.footer-top-image {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-top-image img {
+  max-width: var(--width-body-section);
+  height: auto;
+  object-fit: contain;
+}
+
+/*Footer styles*/
 .site-footer {
   background-color: transparent;
-  padding: 20px 0;
+  padding:0;
   font-family: Arial, sans-serif;
 }
 
 .footer-container {
   max-width: var(--width-body-section);
+  
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.9);/*Change with bg image later*/
   padding: 20px;
@@ -16,7 +30,6 @@
   border-left: 1px solid rgba(0, 0, 0, 0.1);
   border-right: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  margin-top: -20px;/*bruteforcing to remove gap with the body-section*/
   
 }
 
@@ -46,6 +59,12 @@
   margin: 5px;
 }
 
+/* target footer when it's within the same page as employee-table-container */
+.body-section:has(.employee-table-container) ~ .site-footer {
+  min-width: var(--min-footer-width);
+}
+
+
 /* Desktop styles */
 @media screen and (min-width: 771px) {
   .footer-content {
@@ -64,5 +83,11 @@
 
   .footer-bottom img {
     margin: 0 10px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .footer-top-image img {
+    max-width: 100%;
   }
 }

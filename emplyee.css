@@ -1,11 +1,5 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #f5f5f5;
-}
-.container {
-    max-width: 1200px;
+.employee-table-container {
+    max-width: 1000px;
     min-width: fit-content;
     margin: 0 auto;
     background-color: white;

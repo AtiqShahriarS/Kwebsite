@@ -1,8 +1,370 @@
+
+/* Dynamic header */
 .dynamic-header {
   width: 100%;
-  height: 500px; /* Adjust the height as needed */
+  height: 50vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  margin-bottom: 20px; /* Add some space below the header */
+  margin-bottom: 20px;
+  transition: height 0.3s ease;
+}
+
+
+/* Information section styles */
+.information-section {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.information-section h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #003366;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #0a642c;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
+  gap: 20px;
+}
+
+.info-card {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 10px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+  min-height: 300px;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+}
+
+.info-icon {
+  font-size: 36px;
+  color: #003366;
+  margin-bottom: 15px;
+}
+
+.info-card h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #0f2e4d;
+  margin-bottom: 10px;
+}
+
+.info-card p {
+  color: #666;
+  font-size: 14px;
+}
+
+/* Styling for news links */
+.info-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.info-card ul li {
+  margin-bottom: 10px;
+}
+
+.info-card ul li a {
+  color: #46719c;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+}
+
+.info-card ul li a:hover {
+  color: #358b24;
+  transform: translateX(5px);
+  border-bottom: 2px solid #11640a;
+}
+
+.info-card ul li a:active {
+  color: #096b00;
+}
+
+/* Top content section styles */
+.top-content {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  background-color: #eefafd;
+  border-radius: 20px;
+  margin-bottom: 40px;
+  align-items: flex-start;
+}
+
+/* Image section styles */
+.image-section {
+  flex: 0 0 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.image-section img {
+  width: 70%;
+  height: auto;
+  margin-left: 10%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Text section styles */
+.text-section {
+  flex: 1;
+  padding: 20px;
+}
+
+.text-section h1 {
+  color: #0066cc;
+  font-size: 2.5rem;
+  font-weight: bolder;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #0066cc;
+  padding-bottom: 10px;
+}
+
+.text-section p {
+  background-color: #f0f8ff; /* Light blue background for emphasis */
+  padding: 15px;
+  border-left: 4px solid red; 
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #333; /* Dark text color for readability */
+  line-height: 1.6;
+}
+
+.text-section p:nth-child(4) {
+  border-left-color: #dc3545; 
+}
+
+.text-section p:nth-child(3) {
+  border-left-color: #1e90ff; /* Blue border for water bodies info */
+}
+
+
+/*Helpline grid styles*/
+.helpline-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  padding: 15px;
+  margin-top: 15px;
+}
+
+.helpline-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #d2e8ff;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.helpline-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 10px;
+}
+/*
+.helpline-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 8px;
+  text-align: center;
+  font-size: 14px;
+}
+*/
+
+.slideshow-wrapper {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 15px;
+}
+
+.slideshow {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slide-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide-img.active {
+  opacity: 1;
+}
+
+/* View More button styles */
+.view-more-container {
+  text-align: right;
+  margin-top: 10px;
+  padding-right: 10px;
+}
+
+.view-more-btn {
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: #1c6977;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.view-more-btn:hover {
+  background-color: #398997;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.view-more-btn:active {
+  transform: translateY(0);
+}
+
+/* Adjust view more button position for smaller screens */
+@media (max-width: 590px) {
+  .view-more-container {
+      text-align: center;
+      margin-top: 15px;
+  }
+}
+
+/*Responsive design for helpline images grid*/
+/* Medium screens */
+@media (min-width: 586px) and (max-width: 920px) {
+  .helpline-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+  .helpline-item {
+      height: 150px;
+  }
+}
+
+/* Large screens */
+@media (min-width: 921px) {
+  .helpline-grid {
+      grid-template-columns: repeat(3, 1fr);
+  }
+  .helpline-item {
+      height: 140px;
+  }
+}
+
+
+/* Small screens */
+@media (max-width: 585px) {
+  .helpline-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+  .helpline-item {
+      height: 110px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 471px) {
+  .helpline-grid {
+      grid-template-columns: repeat(1, 1fr);
+  }
+  .helpline-item {
+      height: 120px;
+  }
+}
+
+/* Responsive design for top content*/
+@media (max-width: 950px) {
+  .top-content {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .image-section {
+    flex: none;
+    width: 100%;
+    max-width: 500px;
+  }
+  .image-section img{
+    width: 70%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .text-section {
+    padding: 20px 0;
+    width: 100%;
+  }
+}
+
+/* top-content adjustments for very small screens */
+@media (max-width: 480px) {
+  .image-section img {
+    width: 85%; /* Slightly larger for very small screens to maintain readability */
+  }
+  
+  .text-section h1 {
+    font-size: 1.5rem;
+  }
+  
+  .text-section p {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+}
+
+/*Responsivve design for info cards*/
+@media (max-width: 590px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .info-card {
+    min-width: auto;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .info-card ul li a {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .dynamic-header {
+    height: 60vh;
+  }
 }

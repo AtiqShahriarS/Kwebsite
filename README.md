@@ -5,7 +5,4 @@ Clean repo from kpw repo
 
 
 todo:
-  make footer
-  integrate translation
-  make auto img slider for homepage
   
