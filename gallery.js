@@ -1,40 +1,99 @@
 document.addEventListener("DOMContentLoaded", function () {
   const modal = document.getElementById("imageModal");
   const galleryItems = document.querySelectorAll(".gallery-item");
-  const modalCaption = document.getElementById("modalCaption");
+  const modalImg = modal.querySelector(".modal-content");
+  const modalTitle = modal.querySelector(".modal-title");
+  const modalDescription = modal.querySelector(".modal-description");
+  const modalDetails = modal.querySelector(".modal-details");
+  const closeButton = modal.querySelector(".modal-close");
+  const prevBtn = modal.querySelector(".prev-btn");
+  const nextBtn = modal.querySelector(".next-btn");
+  const imageCounter = modal.querySelector(".image-counter");
 
-  // Create and append modal image if it doesn't exist
-  let modalImg = document.createElement("img");
-  modalImg.className = "modal-content";
-  modal.insertBefore(modalImg, modalCaption);
+  let currentAlbum = [];
+  let currentIndex = 0;
 
-  // Add click handlers to each gallery thumbnail
   galleryItems.forEach((item) => {
     item.addEventListener("click", function () {
-      modal.style.display = "flex";
-      modalImg.src = this.querySelector("img").src;
-      modalCaption.textContent =
-        this.querySelector(".gallery-caption").textContent;
+      modal.style.display = "block";
+
+      // Check if this is an album
+      const albumImages = this.querySelector(".album-images");
+      if (albumImages) {
+        // Handle album view
+        currentAlbum = Array.from(albumImages.getElementsByTagName("img"));
+        currentIndex = 0;
+        showImage(currentIndex);
+
+        // Show navigation if multiple images
+        if (currentAlbum.length > 1) {
+          prevBtn.style.display = "block";
+          nextBtn.style.display = "block";
+          imageCounter.style.display = "block";
+        }
+      } else {
+        // Handle single image view
+        modalImg.src = this.querySelector("img").src;
+        currentAlbum = [];
+        prevBtn.style.display = "none";
+        nextBtn.style.display = "none";
+        imageCounter.style.display = "none";
+      }
+
+      // Get data from hidden div
+      const imageData = this.querySelector(".image-data");
+      if (imageData) {
+        modalTitle.textContent = imageData.querySelector("h2").textContent;
+        modalDescription.textContent = imageData.querySelector("p").textContent;
+        modalDetails.innerHTML = imageData.querySelector(".details").innerHTML;
+      }
     });
   });
 
-  // Close modal when clicking anywhere on it
-  modal.addEventListener("click", function (e) {
-    // Only close if clicking on the modal background, not the image
-    if (e.target === modal) {
-      modal.style.display = "none";
+  function showImage(index) {
+    modalImg.src = currentAlbum[index].src;
+    updateImageCounter();
+  }
+
+  function updateImageCounter() {
+    if (currentAlbum.length > 0) {
+      imageCounter.textContent = `${currentIndex + 1} / ${currentAlbum.length}`;
+    }
+  }
+
+  // Navigation event listeners
+  prevBtn?.addEventListener("click", function (e) {
+    e.stopPropagation();
+    if (currentAlbum.length > 0) {
+      currentIndex =
+        (currentIndex - 1 + currentAlbum.length) % currentAlbum.length;
+      showImage(currentIndex);
     }
   });
 
-  // Prevent scrolling when modal is open
-  modal.addEventListener("wheel", function (e) {
-    e.preventDefault();
+  nextBtn?.addEventListener("click", function (e) {
+    e.stopPropagation();
+    if (currentAlbum.length > 0) {
+      currentIndex = (currentIndex + 1) % currentAlbum.length;
+      showImage(currentIndex);
+    }
   });
 
-  // Add keyboard support
+  // Close modal handlers
+  closeButton.addEventListener("click", function () {
+    modal.style.display = "none";
+  });
+
+  // Keyboard navigation
   document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape" && modal.style.display === "flex") {
-      modal.style.display = "none";
+    if (modal.style.display === "block") {
+      if (e.key === "Escape") {
+        modal.style.display = "none";
+      }
+      if (currentAlbum.length > 0) {
+        if (e.key === "ArrowLeft") prevBtn.click();
+        if (e.key === "ArrowRight") nextBtn.click();
+      }
     }
   });
 });
